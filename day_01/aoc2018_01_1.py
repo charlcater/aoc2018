@@ -1,5 +1,5 @@
 # Advent of Code 2018
-# Day 01: Day 1: Chronal Calibration -- Part 1
+# Day 01: Chronal Calibration -- Part 1
 
 with open('input.txt', 'r') as f:
 
