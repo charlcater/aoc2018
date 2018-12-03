@@ -5,32 +5,32 @@ import difflib
 
 with open('input.txt', 'r') as f:
 
-	lst = [i for i in f.read().splitlines()]
-	#lst = ['abcd', 'abce']
-	length = len(lst)
-	print('Total Lines: {}'.format(length))
+    lst = [i for i in f.read().splitlines()]
+    #lst = ['abcd', 'abce']
+    length = len(lst)
+    print('Total Lines: {}'.format(length))
 
-	commonSet = list()
+    commonSet = list()
 
-	for line in range(length):
-		d = (difflib.get_close_matches(lst[line], lst, n=2, cutoff=25/26))
-		# 25/26 characters are the same = 0.962
-		
-		for match in d:
-			if match != lst[line]:
-				#print(match)
-				commonSet.append(match)
-			else:
-				continue
+    for line in range(length):
+        d = (difflib.get_close_matches(lst[line], lst, n=2, cutoff=25/26))
+        # 25/26 characters are the same = 0.962
+        
+        for match in d:
+            if match != lst[line]:
+                #print(match)
+                commonSet.append(match)
+            else:
+                continue
+    print(commonSet)
 
-	print(commonSet)
 
 ans = []
 for x in commonSet:
-	for y in commonSet:
-		if len(ans) == 0:  # otherwise we do it twice
-			for i in range(len(x)):
-				if x != y:
-					if x[i] == y[i]:
-						ans.append(x[i])
-			print(''.join(ans))
+    for y in commonSet:
+        if len(ans) == 0:  # otherwise we do it twice
+            for i in range(len(x)):
+                if x != y:
+                    if x[i] == y[i]:
+                        ans.append(x[i])
+            print(''.join(ans))
