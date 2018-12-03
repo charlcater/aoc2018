@@ -13,7 +13,8 @@ with open('input.txt', 'r') as f:
 	commonSet = list()
 
 	for line in range(length):
-		d = (difflib.get_close_matches(lst[line], lst, n=2, cutoff=0.96))
+		d = (difflib.get_close_matches(lst[line], lst, n=2, cutoff=25/26))
+		# 25/26 characters are the same = 0.962
 		
 		for match in d:
 			if match != lst[line]:
@@ -27,7 +28,7 @@ with open('input.txt', 'r') as f:
 ans = []
 for x in commonSet:
 	for y in commonSet:
-		if len(ans) == 0:
+		if len(ans) == 0:  # otherwise we do it twice
 			for i in range(len(x)):
 				if x != y:
 					if x[i] == y[i]:
