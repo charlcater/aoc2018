@@ -4,9 +4,6 @@
 import numpy as np
 import pandas as pd
 
-itercount = 0
-itercount2 = 0
-
 sheet = np.zeros((1000, 1000))
 
 with open('input.txt', 'r') as f:
