@@ -1,6 +1,6 @@
 # Advent of Code 2018
 # Day 04: Repose Record -- Part 1
-# Much much more elegant solution inspired mostyl by @jonathan_paulson
+# Much much more elegant solution inspired mostly by @jonathan_paulson
 # https://www.reddit.com/r/adventofcode/comments/a2xef8/2018_day_4_solutions/eb1wb5a
 
 from collections import defaultdict
