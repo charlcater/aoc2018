@@ -1,3 +1,6 @@
+# Advent of Code 2018
+# Day 6: Chronal Coordinates -- Part 1 & 2
+
 from collections import defaultdict
 
 def part1(lines):
